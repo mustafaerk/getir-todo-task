@@ -45,7 +45,7 @@ export default function ToDoTable({ tableHeaders, tableBody }) {
             {todoElem.name}
         </TableCell>
         <TableCell >{todoElem.description}</TableCell>
-        <TableCell ><Switch defaultChecked={todoElem.status} />
+        <TableCell ><Switch defaultChecked={todoElem.status} disabled />
         </TableCell>
 
     </TableRow>

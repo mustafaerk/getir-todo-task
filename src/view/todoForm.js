@@ -80,7 +80,10 @@ export default function Home() {
                     {back}
                 </Button>
             </div>
-            <TodoForm formInfo={id ? currentTodo : {}} handleSubmit={handleSubmit} />
+            <TodoForm
+                formInfo={id ? currentTodo : { name: "", description: "", status: false }}
+                handleSubmit={handleSubmit}
+            />
             <Snackbar
                 open={open}
                 autoHideDuration={6000}
