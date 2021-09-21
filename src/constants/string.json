@@ -1,3 +1,7 @@
 {
-  "addNewTodo": "Add new Todo"
+  "addNewTodo": "Add new Todo",
+  "editTodo": "Edit Todo",
+  "submit": "Submit",
+  "update": "Update",
+  "back": "Back"
 }

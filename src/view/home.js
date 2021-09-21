@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import { useSelector, useDispatch } from 'react-redux';
 import { makeStyles } from '@mui/styles';
+import { useHistory } from 'react-router-dom';
+
 
 import Table from "../components/table";
 import { getTodoListAction } from "../redux/actions";
@@ -27,7 +29,10 @@ const useStyles = makeStyles({
 
 
 export default function Home() {
+    const history = useHistory();
     const dispatch = useDispatch();
+    const classes = useStyles();
+
     const [todos, setTodos] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -45,13 +50,14 @@ export default function Home() {
         dispatch(getTodoListAction());
     }, [])
 
-    const classes = useStyles();
     return (
-        isLoading ? <div> Loading</div>
+        isLoading ? <div> Loading </div>
             : <div>
-                <div className={classes.header}>  <Button variant="contained" endIcon={<AddIcon />}>
-                    {addNewTodo}
-                </Button></div>
+                <div className={classes.header}>
+                    <Button variant="contained" endIcon={<AddIcon />} onClick={() => history.push('/newtodo')}>
+                        {addNewTodo}
+                    </Button>
+                </div>
                 <div className={classes.wrapper}>
                     <Table
                         tableBody={todos}
