@@ -5,7 +5,7 @@ import {
   Route
 } from "react-router-dom";
 
-import Home from "./view/home/home";
+import Home from "./view/home";
 
 export default function App() {
   return (

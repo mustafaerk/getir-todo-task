@@ -1,0 +1,8 @@
+
+export const ActionTypes = {
+    GET_TODO_LIST: "GET_TODO_LIST",
+    GET_TODO_INFO: "GET_TODO_INFO",
+    UPDATE_TODO: "UPDATE_TODO",
+    DELETE_TODO: "DELETE_TODO",
+    HTTP_REQUEST: "HTTP_REQUEST"
+}
